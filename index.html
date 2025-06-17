@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My OJT Journey - Learning Web Development</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#6366f1", secondary: "#8b5cf6" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary"
+          >OJT Journey</a
+        >
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#home"
+            class="font-medium text-gray-800 hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a
+            href="#progress"
+            class="font-medium text-gray-800 hover:text-primary transition-colors"
+            >Progress</a
+          >
+          <a
+            href="#projects"
+            class="font-medium text-gray-800 hover:text-primary transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#about"
+            class="font-medium text-gray-800 hover:text-primary transition-colors"
+            >About</a
+          >
+        </nav>
+
+        <!-- Dark Mode Toggle -->
+        <div class="flex items-center space-x-4">
+          <div class="mode-switch" id="modeSwitch">
+            <span class="sr-only">Toggle dark mode</span>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="md:hidden w-10 h-10 flex items-center justify-center text-gray-800"
+            id="mobileMenuButton"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        class="md:hidden hidden bg-white shadow-lg absolute w-full"
+        id="mobileMenu"
+      >
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+          <a
+            href="#home"
+            class="font-medium text-gray-800 hover:text-primary transition-colors py-2"
+            >Home</a
+          >
+          <a
+            href="#progress"
+            class="font-medium text-gray-800 hover:text-primary transition-colors py-2"
+            >Progress</a
+          >
+          <a
+            href="#projects"
+            class="font-medium text-gray-800 hover:text-primary transition-colors py-2"
+            >Projects</a
+          >
+          <a
+            href="#about"
+            class="font-medium text-gray-800 hover:text-primary transition-colors py-2"
+            >About</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden animated-bg">
+      <div
+        class="container mx-auto px-4 py-20 md:py-32 flex flex-col items-center text-center relative z-10"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+          Journey as an Intern
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-700 mb-8">
+          Learning the Basics of Web Development
+        </p>
+
+        <div
+          class="code-snippet bg-gray-800 text-gray-100 p-4 rounded-lg mb-10 max-w-lg w-full overflow-hidden"
+        >
+          <pre class="text-left text-sm md:text-base overflow-x-auto">
+<span class="text-blue-400">const</span> <span class="text-green-400">myJourney</span> = {
+  <span class="text-yellow-400">html</span>: <span class="text-orange-400">'Structure'</span>,
+  <span class="text-yellow-400">css</span>: <span class="text-orange-400">'Style'</span>,
+  <span class="text-yellow-400">javascript</span>: <span class="text-orange-400">'Functionality'</span>,
+  <span class="text-yellow-400">progress</span>: <span class="text-purple-400">function</span>() {
+    <span class="text-blue-400">return</span> <span class="text-orange-400">'Growing every day!'</span>;
+  }
+};</pre>
+        </div>
+
+        <a
+          href="#progress"
+          class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 !rounded-button shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+        >
+          Start Exploring
+        </a>
+
+        <div class="scroll-indicator absolute bottom-8">
+          <i class="ri-arrow-down-line ri-2x text-primary"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Statistics -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary/10 rounded-full"
+            >
+              <i class="ri-calendar-line ri-xl text-primary"></i>
+            </div>
+            <h3
+              class="text-4xl font-bold text-primary counter-value"
+              data-target="30"
+            >
+              0
+            </h3>
+            <p class="text-black-600 mt-2">Days of Learning</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary/10 rounded-full"
+            >
+              <i class="ri-code-box-line ri-xl text-primary"></i>
+            </div>
+            <h3
+              class="text-4xl font-bold text-primary counter-value"
+              data-target="6"
+            >
+              0
+            </h3>
+            <p class="text-black-600 mt-2">Projects Completed</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary/10 rounded-full"
+            >
+              <i class="ri-code-line ri-xl text-primary"></i>
+            </div>
+            <h3
+              class="text-4xl font-bold text-primary counter-value"
+              data-target="4500"
+            >
+              0
+            </h3>
+            <p class="text-black-600 mt-2">Lines of Code</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary/10 rounded-full"
+            >
+              <i class="ri-award-line ri-xl text-primary"></i>
+            </div>
+            <h3
+              class="text-4xl font-bold text-primary counter-value"
+              data-target="7"
+            >
+              0
+            </h3>
+            <p class="text-black-600 mt-2">Skills Acquired</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Learning Timeline -->
+    <section id="progress" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            My Learning Progress
+          </h2>
+          <!-- <p class="text-gray-600 max-w-2xl mx-auto">
+            Track my journey from beginner to proficient web developer through
+            this interactive timeline.
+          </p> -->
+        </div>
+
+        <div class="relative timeline-container py-8 max-w-4xl mx-auto">
+          <!-- HTML Timeline Item -->
+          <div class="timeline-item left mb-16">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500"
+            >
+              <div class="flex items-center mb-4">
+                <!-- <div
+                  class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4"
+                >
+                  <i class="ri-html5-line ri-lg text-blue-500"></i>
+                </div> -->
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    HTML Fundamentals
+                  </h3>
+                  <p class="text-gray-500">Started: May 19, 2025</p>
+                </div>
+              </div>
+
+              <p class="text-gray-600 mb-4">
+                Learned the building blocks of web pages including semantic
+                elements, forms, and proper document structure.
+              </p>
+
+              <div class="mb-2 flex justify-between">
+                <span class="text-sm text-gray-600">Progress</span>
+                <span class="text-sm font-medium text-blue-500">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div
+                  class="progress-value"
+                  style="
+                    width: 90%;
+                    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+                  "
+                ></div>
+              </div>
+
+              <div class="mt-4">
+                <h4 class="font-medium text-gray-800 mb-2">Key Skills:</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Semantic HTML</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Forms</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Tables</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Accessibility</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CSS Timeline Item -->
+          <div class="timeline-item right mb-16">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-purple-500"
+            >
+              <div class="flex items-center mb-4">
+                <!-- <div
+                  class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mr-4"
+                >
+                  <i class="ri-css3-line ri-lg text-purple-500"></i>
+                </div> -->
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">CSS & Styling</h3>
+                  <p class="text-gray-500">Started: May 22, 2025</p>
+                </div>
+              </div>
+
+              <p class="text-gray-600 mb-4">
+                Learned the basic understanding of how design principles shape
+                user experience. One of the most valuable lessons is the
+                responsive layouts using Flexbox. For instanace, I have learned
+                how to align elements efficiently with the use of Flexbox.
+              </p>
+
+              <div class="mb-2 flex justify-between">
+                <span class="text-sm text-gray-600">Progress</span>
+                <span class="text-sm font-medium text-purple-500">55%</span>
+              </div>
+              <div class="progress-bar">
+                <div
+                  class="progress-value"
+                  style="
+                    width: 55%;
+                    background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+                  "
+                ></div>
+              </div>
+
+              <div class="mt-4">
+                <h4 class="font-medium text-gray-800 mb-2">Key Skills:</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Flexbox</span
+                  >
+                  <span
+                    class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >CSS Grid</span
+                  >
+                  <span
+                    class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Animations</span
+                  >
+                  <span
+                    class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Responsive Design</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JavaScript Timeline Item -->
+          <div class="timeline-item left">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-yellow-500"
+            >
+              <div class="flex items-center mb-4">
+                <!-- <div
+                  class="w-12 h-12 flex items-center justify-center bg-yellow-100 rounded-full mr-4"
+                >
+                  <i class="ri-javascript-line ri-lg text-yellow-500"></i>
+                </div> -->
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    JavaScript Programming
+                  </h3>
+                  <p class="text-gray-500">Started: May 26 , 2025</p>
+                </div>
+              </div>
+
+              <p class="text-gray-600 mb-4">
+                Learning core JavaScript concepts, DOM manipulation, event
+                handling, and asynchronous programming.
+              </p>
+
+              <div class="mb-2 flex justify-between">
+                <span class="text-sm text-gray-600">Progress</span>
+                <span class="text-sm font-medium text-yellow-500">45%</span>
+              </div>
+              <div class="progress-bar">
+                <div
+                  class="progress-value"
+                  style="
+                    width: 45%;
+                    background: linear-gradient(90deg, #eab308, #fcd34d);
+                  "
+                ></div>
+              </div>
+
+              <div class="mt-4">
+                <h4 class="font-medium text-gray-800 mb-2">Key Skills:</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >DOM Manipulation</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Event Handling</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Variables & Data Types</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Functions</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Git & Github Timeline Item -->
+          <div class="timeline-item right">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500"
+            >
+              <div class="flex items-center mb-4">
+                <!-- <div
+                  class="w-12 h-12 flex items-center justify-center bg-yellow-100 rounded-full mr-4"
+                >
+                  <i class="ri-git-line ri-lg text-yellow-500"></i>
+                </div> -->
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">Git & Github</h3>
+                  <p class="text-gray-500">Started: May 29 , 2025</p>
+                </div>
+              </div>
+
+              <p class="text-gray-600 mb-4">
+                Learning version control with Git, collaboration, branching,
+                merging, and using Github for remote repositories
+              </p>
+
+              <div class="mb-2 flex justify-between">
+                <span class="text-sm text-gray-600">Progress</span>
+                <span class="text-sm font-medium text-yellow-500">35%</span>
+              </div>
+              <div class="progress-bar">
+                <div
+                  class="progress-value"
+                  style="
+                    width: 35%;
+                    background: linear-gradient(90deg, #eab308, #fcd34d);
+                  "
+                ></div>
+              </div>
+
+              <div class="mt-4">
+                <h4 class="font-medium text-gray-800 mb-2">Key Skills:</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Version Control</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Branching</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Merging</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Node.js and Express.js -->
+          <div class="timeline-item left">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-purple-500"
+            >
+              <div class="flex items-center mb-4">
+                <!-- <div
+                  class="w-12 h-12 flex items-center justify-center bg-yellow-100 rounded-full mr-4"
+                >
+                  <i class="ri-git-line ri-lg text-yellow-500"></i>
+                </div> -->
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Node.js and Express.js
+                  </h3>
+                  <p class="text-gray-500">Started: May 29 , 2025</p>
+                </div>
+              </div>
+
+              <p class="text-gray-600 mb-4">
+                Learning backend development using Node.js and Express.js to
+                build web applications and APIs.
+              </p>
+
+              <div class="mb-2 flex justify-between">
+                <span class="text-sm text-gray-600">Progress</span>
+                <span class="text-sm font-medium text-yellow-500">25%</span>
+              </div>
+              <div class="progress-bar">
+                <div
+                  class="progress-value"
+                  style="
+                    width: 25%;
+                    background: linear-gradient(90deg, #eab308, #fcd34d);
+                  "
+                ></div>
+              </div>
+
+              <div class="mt-4">
+                <h4 class="font-medium text-gray-800 mb-2">Key Skills:</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Event-Driven Programming</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Routing</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Middleware Implementation</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Database Implementation</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WordPress -->
+          <div class="timeline-item right">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-yellow-500"
+            >
+              <div class="flex items-center mb-4">
+                <!-- <div
+                  class="w-12 h-12 flex items-center justify-center bg-yellow-100 rounded-full mr-4"
+                >
+                  <i class="ri-git-line ri-lg text-yellow-500"></i>
+                </div> -->
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">WordPress</h3>
+                  <p class="text-gray-500">Started: June 16 , 2025</p>
+                </div>
+              </div>
+
+              <p class="text-gray-600 mb-4">
+                Learning Wordpress which is a popular content management system
+                used for building websites and blogs.
+              </p>
+
+              <div class="mb-2 flex justify-between">
+                <span class="text-sm text-gray-600">Progress</span>
+                <span class="text-sm font-medium text-yellow-500">20%</span>
+              </div>
+              <div class="progress-bar">
+                <div
+                  class="progress-value"
+                  style="
+                    width: 20%;
+                    background: linear-gradient(90deg, #eab308, #fcd34d);
+                  "
+                ></div>
+              </div>
+
+              <div class="mt-4">
+                <h4 class="font-medium text-gray-800 mb-2">Key Skills:</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Basics</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Themes & Design</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Plugins & Functionality</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Customization</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="mt-16 text-center">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">
+            Overall Progress
+          </h3>
+          <div class="max-w-3xl mx-auto">
+            <div id="skillsChart" class="h-80 w-full"></div>
+          </div>
+        </div> -->
+        -
+      </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section id="projects" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white-900 mb-4">
+            Project Showcase
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            A collection of projects I've built during my journey as an intern,
+            showcasing my growing skills in web development.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-2"
+          >
+            <div class="h-48 bg-gray-200 relative overflow-hidden">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjcpgsXNNTnxp8oBA8CCmR-ZzIiZcY05MC_w&s"
+                alt="Registration Form"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <h3 class="text-white font-semibold">Registration Form</h3>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >CSS</span
+                >
+              </div>
+              <p class="text-black-600 mb-4">
+                A Registration Form which is used to collect information,
+                typically for acount creation, event sign-ups, or subscription
+                services.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="#"
+                  class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >
+                  <a
+                    href="https://lawrde-ce.github.io/Registration-Form/"
+                    target="_blank"
+                  >
+                    <span>View Project</span></a
+                  >
+                  <i class="ri-arrow-right-line ri-sm ml-1"></i>
+                </a>
+                <div class="flex space-x-2">
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-2"
+          >
+            <div class="h-48 bg-gray-200 relative overflow-hidden">
+              <img
+                src="data:image/png;base64,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"
+                alt="Cafe Menu"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <h3 class="text-white font-semibold">Cafe Menu</h3>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >CSS</span
+                >
+              </div>
+              <p class="text-black-600 mb-4">
+                A Cafe Menu designed to showcase a cafe's offerings in an
+                organized and visaully appealing way.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="#"
+                  class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >
+                  <a
+                    href="https://lawrde-ce.github.io/Basic-CSS-Cafe-Menu/"
+                    target="_blank"
+                  >
+                    <span>View Project</span></a
+                  >
+                  <i class="ri-arrow-right-line ri-sm ml-1"></i>
+                </a>
+                <div class="flex space-x-2">
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-2"
+          >
+            <div class="h-48 bg-gray-200 relative overflow-hidden">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="Photo Gallery"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <h3 class="text-white font-semibold">Photo Gallery</h3>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >CSS</span
+                >
+              </div>
+              <p class="text-black-600 mb-4">
+                A Photo Gallery using CSS Flexbox which provides a responsive
+                and organized way to display images.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="#"
+                  class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >
+                  <a
+                    href="https://lawrde-ce.github.io/Photo-Gallery/"
+                    target="_blank"
+                  >
+                    <span>View Project</span></a
+                  >
+                  <i class="ri-arrow-right-line ri-sm ml-1"></i>
+                </a>
+                <div class="flex space-x-2">
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-2"
+          >
+            <div class="h-48 bg-gray-200 relative overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=calculator%20app%20with%20numeric%20keypad%2C%20operations%20buttons%2C%20display%20screen%2C%20modern%20clean%20interface%20design&width=600&height=400&seq=4&orientation=landscape"
+                alt="Calculator App"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <h3 class="text-white font-semibold">Calculator App</h3>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >CSS</span
+                >
+                <span
+                  class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >JavaScript</span
+                >
+              </div>
+              <p class="text-black-600 mb-4">
+                A functional calculator with basic arithmetic operations and a
+                clean, responsive interface.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="#"
+                  class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >
+                  <a
+                    href="https://lawrde-ce.github.io/web-calculator/"
+                    target="_blank"
+                  >
+                    <span>View Project</span></a
+                  >
+                  <i class="ri-arrow-right-line ri-sm ml-1"></i>
+                </a>
+                <div class="flex space-x-2">
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-2"
+          >
+            <div class="h-48 bg-gray-200 relative overflow-hidden">
+              <img
+                src="data:image/jpeg;base64,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Y9bRpq14bxyQVRqZAea5zfP0sp4nm33Poz05Iup1IkHMeD27/l6qeJp33NePVsiqnVmqZ9wnsF/S6nLTvu3Xr2I6SkkbkWHwv6KctS2jqV6wwFGMQEBAQUIRGIXve42uSbZC5JsOAv0ItMzPWVqIEG+ahQWjc7jYeNz/ALVSzpdz6eNObNqVXsCAgICAgICAgICAgICAgICAgtkja7JwB7QD6oiaxPWHhqNCUz98Y7rjy3Kcte+x6N+tUZUam07uaXN8CPKyniad90aNunJFVOpDxzHg9v8A8+aniad9y2/rZF1Oq9Uz7l+zP0up4oaepuzXr2ZRstDK3JzCO5TlqW0NSvWrARbfkjFMY6qICAg6hqvBgp29ZJ8OT9Kxy7HYKcGjEee5LKG4ICAgICAgICAgICAgICAgICAgICAgIKPYDkQCOBFwiJiJ6vFPoenfvjb3ZeinLBfZNG/WqLqNT6Z3Nu3wt5WU5lqX3ToW6cvPwRdRqO77kgPbl/nip4mlfcs/1s8H/KlS1wu24uDlY+hyTia3/itatozHJv8ARQ4I2N6WtAPbbPzVXTaVeCkVZlC4gICAgICAgICAgICAgICAgICDE6fqRGVhnPUgptnf4EFNq7igbV3FA2ruPkgrtnf4EFwnPBBkjkuiV6AgICAgICAgICAgICAgICAgICAgEBBYYm8EMKbBv+FDBsB1oYU2A60MK7AdaGDYt/woYXCNvBDC4ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/9k="
+                alt="TO-Do"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <h3 class="text-white font-semibold">To-Do List</h3>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >CSS</span
+                >
+                <span
+                  class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >JavaScript</span
+                >
+              </div>
+              <p class="text-black-600 mb-4">
+                A simple to-Do List showcasing the basic CRUD operations.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="#"
+                  class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >
+                  <a
+                    href="https://lawrde-ce.github.io/To-Do-List/"
+                    target="_blank"
+                    ><span onclick="">View Project</span></a
+                  >
+                  <i class="ri-arrow-right-line ri-sm ml-1"></i>
+                </a>
+                <div class="flex space-x-2">
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-2"
+          >
+            <div class="h-48 bg-gray-200 relative overflow-hidden">
+              <img
+                src="/images/snapshop.png"
+                alt="SnapShop"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="p-4 text-white">
+                  <h3 class="text-white font-semibold">SnapShop</h3>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >CSS</span
+                >
+                <span
+                  class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >JavaScript</span
+                >
+              </div>
+              <p class="text-black-600 mb-4">
+                A simple responsive e-commerce product page with Login,
+                Register, Admin, and Customer Page functionalities.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="#"
+                  class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >
+                  <a href="https://amancio.local/#" target="_blank">
+                    <span>View Project</span></a
+                  >
+                  <i class="ri-arrow-right-line ri-sm ml-1"></i>
+                </a>
+                <div class="flex space-x-2">
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
+                  >
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="mt-12 text-center">
+          <a
+            href="#"
+            class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 !rounded-button shadow-md transition-colors whitespace-nowrap"
+          >
+            View All Projects
+          </a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Blog/Journal Section 
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Learning Journal
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Follow my thoughts, challenges, and breakthroughs as I navigate
+            through the world of web development.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+           Journal Entry 1 
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-sm text-gray-500">May 5, 2025</span>
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >HTML</span
+                >
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Getting Started with Semantic HTML
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Today I learned about the importance of semantic HTML and how it
+                improves accessibility and SEO. I've been replacing generic div
+                elements with more meaningful tags like header, nav, main, and
+                footer.
+              </p>
+              <a
+                href="#"
+                class="text-primary hover:text-primary/80 font-medium flex items-center"
+              >
+                <span>Read More</span>
+                <i class="ri-arrow-right-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+           Journal Entry 2 
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-sm text-gray-500">May 18, 2025</span>
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >CSS</span
+                >
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Flexbox Changed My Life
+              </h3>
+              <p class="text-gray-600 mb-4">
+                After struggling with CSS layouts for weeks, I finally
+                understand Flexbox! It's incredible how much easier it makes
+                positioning elements. I've rebuilt my portfolio page using
+                Flexbox principles.
+              </p>
+              <a
+                href="#"
+                class="text-primary hover:text-primary/80 font-medium flex items-center"
+              >
+                <span>Read More</span>
+                <i class="ri-arrow-right-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          Journal Entry 3 
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-sm text-gray-500">June 12, 2025</span>
+                <span
+                  class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >JavaScript</span
+                >
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                The DOM and Event Listeners
+              </h3>
+              <p class="text-gray-600 mb-4">
+                JavaScript is challenging but rewarding! Today I learned how to
+                manipulate the DOM and add event listeners. I created a simple
+                interactive form that validates user input in real-time.
+              </p>
+              <a
+                href="#"
+                class="text-primary hover:text-primary/80 font-medium flex items-center"
+              >
+                <span>Read More</span>
+                <i class="ri-arrow-right-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          Journal Entry 4
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-sm text-gray-500">June 25, 2025</span>
+                <span
+                  class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >JavaScript</span
+                >
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Async/Await and Fetch API
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Working with APIs is fascinating! I've implemented the Fetch API
+                with async/await syntax to retrieve weather data for my weather
+                app project. The code is much cleaner than using promises.
+              </p>
+              <a
+                href="#"
+                class="text-primary hover:text-primary/80 font-medium flex items-center"
+              >
+                <span>Read More</span>
+                <i class="ri-arrow-right-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          Journal Entry 5 
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-sm text-gray-500">July 3, 2025</span>
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >CSS</span
+                >
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                CSS Animations and Transitions
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Today I explored CSS animations and transitions to add life to
+                my projects. I created a loading spinner, button hover effects,
+                and a card flip animation that really enhances the user
+                experience.
+              </p>
+              <a
+                href="#"
+                class="text-primary hover:text-primary/80 font-medium flex items-center"
+              >
+                <span>Read More</span>
+                <i class="ri-arrow-right-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          Journal Entry 6 
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-sm text-gray-500">July 15, 2025</span>
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >JavaScript</span
+                >
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Form Validation Best Practices
+              </h3>
+              <p class="text-gray-600 mb-4">
+                I've been learning about form validation techniques using both
+                HTML5 attributes and JavaScript. I implemented client-side
+                validation for my contact form with custom error messages.
+              </p>
+              <a
+                href="#"
+                class="text-primary hover:text-primary/80 font-medium flex items-center"
+              >
+                <span>Read More</span>
+                <i class="ri-arrow-right-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a
+            href="#"
+            class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 !rounded-button shadow-md transition-colors whitespace-nowrap"
+          >
+            View All Entries
+          </a>
+        </div>
+      </div>
+    </section>--->
+
+    <!-- About Section  
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              About Me
+            </h2>
+            <p class="text-gray-600">
+              A 3rd Year Student taking the Bachelor of Science in Computer
+              Engineering
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+            <div class="flex flex-col md:flex-row gap-8">
+              <div class="md:w-1/3">
+                <img
+                  src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20young%20web%20developer%2C%20sitting%20at%20desk%20with%20computer%2C%20casual%20professional%20attire%2C%20focused%20expression%2C%20clean%20background&width=400&height=500&seq=7&orientation=portrait"
+                  alt="Profile Photo"
+                  class="w-full h-auto rounded-lg shadow-md"
+                />
+
+                <div id="abouts" class="mt-6">
+                  <h3 class="text-xl font-bold text-black-800 mb-2">
+                    Learning Goals
+                  </h3>
+                  <div class="space-y-3">
+                    <div class="flex items-start">
+                      <input type="checkbox" checked class="mt-1 mr-3" />
+                      <span class="text-black-600">Master HTML semantics</span>
+                    </div>
+                    <div class="flex items-start">
+                      <input type="checkbox" checked class="mt-1 mr-3" />
+                      <span class="text-black-600"
+                        >Learn CSS layouts & animations</span
+                      >
+                    </div>
+                    <div class="flex items-start">
+                      <input type="checkbox" class="mt-1 mr-3" />
+                      <span class="text-black-600"
+                        >Build interactive JS applications</span
+                      >
+                    </div>
+                    <div class="flex items-start">
+                      <input type="checkbox" class="mt-1 mr-3" />
+                      <span class="text-black-600"
+                        >Create a full portfolio website</span
+                      >
+                    </div>
+                    <div class="flex items-start">
+                      <input type="checkbox" class="mt-1 mr-3" />
+                      <span class="text-black-600"
+                        >Learn a JavaScript framework</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:w-2/3">
+                <h3 class="text-2xl font-bold text-black-800 mb-4">
+                  My Web Development Story
+                </h3>
+                <div class="space-y-4 text-gray-600">
+                  <p>
+                    Hello! I'm Alexander Mitchell, a marketing professional
+                    transitioning into web development through an On-the-Job
+                    Training program. My journey began in May 2025 when I
+                    decided to pursue my passion for creating on the web.
+                  </p>
+
+                  <p>
+                    With a background in digital marketing, I've always been
+                    fascinated by how websites work and how they can be
+                    optimized for better user experiences. This OJT program has
+                    given me the opportunity to dive deep into the technical
+                    side of web development.
+                  </p>
+
+                  <p>
+                    I started with HTML, learning how to structure content
+                    semantically and accessibly. Then moved on to CSS, where I
+                    discovered the joy (and occasional frustration) of styling
+                    and creating responsive layouts. Now I'm tackling
+                    JavaScript, which has been challenging but incredibly
+                    rewarding.
+                  </p>
+
+                  <p>
+                    My approach to learning involves building real projects,
+                    documenting my progress, and seeking feedback from
+                    experienced developers. This website itself is a testament
+                    to my growth - I've built it from scratch using the skills
+                    I've learned so far!
+                  </p>
+
+                  <p>
+                    When I'm not coding, you can find me hiking, reading UX
+                    design books, or experimenting with new recipes. I believe
+                    that diverse interests help fuel creativity in
+                    problem-solving.
+                  </p>
+                </div>
+
+                <div class="mt-8">
+                  <h3 class="text-xl font-bold text-black-800 mb-4">
+                    Learning Resources
+                  </h3>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded shadow-md">
+                      <div class="flex items-center mb-2">
+                        <div
+                          class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3"
+                        >
+                          <i class="ri-book-open-line text-blue-500"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-800">
+                          Online Courses
+                        </h4>
+                      </div>
+                      <p class="text-sm text-gray-600">
+                        freeCodeCamp, Udemy, MDN Web Docs
+                      </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded shadow-md">
+                      <div class="flex items-center mb-2">
+                        <div
+                          class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-3"
+                        >
+                          <i class="ri-team-line text-green-500"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-800">Communities</h4>
+                      </div>
+                      <p class="text-sm text-gray-600">
+                        Stack Overflow, Dev.to, Reddit
+                      </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded shadow-md">
+                      <div class="flex items-center mb-2">
+                        <div
+                          class="w-10 h-10 flex items-center justify-center bg-yellow-100 rounded-full mr-3"
+                        >
+                          <i class="ri-youtube-line text-yellow-500"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-800">
+                          YouTube Channels
+                        </h4>
+                      </div>
+                      <p class="text-sm text-gray-600">
+                        Traversy Media, Web Dev Simplified
+                      </p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded shadow-md">
+                      <div class="flex items-center mb-2">
+                        <div
+                          class="w-10 h-10 flex items-center justify-center bg-red-100 rounded-full mr-3"
+                        >
+                          <i class="ri-code-box-line text-red-500"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-800">
+                          Practice Platforms
+                        </h4>
+                      </div>
+                      <p class="text-sm text-gray-600">
+                        CodePen, Frontend Mentor, LeetCode
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    Contact/Subscribe Section 
+    <section class="py-16 bg-gradient-to-br from-primary/10 to-secondary/10">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Stay Updated
+          </h2>
+          <p class="text-black-600 mb-8">
+            Subscribe to receive updates on my learning journey, new projects,
+            and web development tips.
+          </p>
+
+          <form class="max-w-md mx-auto">
+            <div class="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="flex-1 px-4 py-3 rounded-lg border-none shadow-md focus:ring-2 focus:ring-primary focus:outline-none text-gray-700"
+              />
+              <button
+                type="submit"
+                class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 !rounded-button shadow-lg hover:shadow-xl transition-all whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+
+          <div class="mt-12">
+            <h3 class="text-xl font-bold text-black-800 mb-4">
+              Connect With Me
+            </h3>
+            <div class="flex justify-center space-x-6">
+              <a
+                href="#"
+                class="w-12 h-12 flex items-center justify-center bg-white text-gray-600 hover:text-primary rounded-full shadow-md transition-colors"
+              >
+                <i class="ri-github-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 flex items-center justify-center bg-white text-gray-600 hover:text-primary rounded-full shadow-md transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 flex items-center justify-center bg-white text-gray-600 hover:text-primary rounded-full shadow-md transition-colors"
+              >
+                <i class="ri-twitter-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 flex items-center justify-center bg-white text-gray-600 hover:text-primary rounded-full shadow-md transition-colors"
+              >
+                <i class="ri-codepen-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <a
+              href="#"
+              class="text-2xl font-['Pacifico'] text-white mb-4 inline-block"
+              >OJT Journey</a
+            >
+            <p class="text-gray-400 mb-4">
+              Documenting my path to becoming a web developer through on-the-job
+              training.
+            </p>
+            <p class="text-gray-400 text-sm">© 2025 Lawrde Darryle Amancio</p>
+          </div>
+
+          <div>
+            <h4 class="text-white text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#progress"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Progress</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white text-lg font-semibold mb-4">Resources</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Learning Journal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Code Snippets</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Web Dev Tools</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white text-lg font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="ri-mail-line mr-2"></i>
+                <a
+                  href="mailto:lawrde.ce@outlook.com"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >lawrde.ce@outlook.com</a
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="ri-map-pin-line mr-2"></i>
+                <span class="text-gray-400">Dalaguete, Cebu</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- <div
+          class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-sm text-gray-400 mb-4 md:mb-0">
+            Made with ❤️ and lots of coffee
+          </p>
+
+          <a
+            href="#home"
+            class="bg-gray-700 hover:bg-gray-600 text-white p-3 rounded-full shadow-lg transition-colors"
+          >
+            <i class="ri-arrow-up-line"></i>
+          </a>
+        </div> --->
+      </div>
+    </footer>
+
+    <script id="mobileMenuToggle">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+
+          // Toggle icon between menu and close
+          const icon = mobileMenuButton.querySelector("i");
+          if (icon.classList.contains("ri-menu-line")) {
+            icon.classList.remove("ri-menu-line");
+            icon.classList.add("ri-close-line");
+          } else {
+            icon.classList.remove("ri-close-line");
+            icon.classList.add("ri-menu-line");
+          }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+            const icon = mobileMenuButton.querySelector("i");
+            icon.classList.remove("ri-close-line");
+            icon.classList.add("ri-menu-line");
+          });
+        });
+      });
+    </script>
+
+    <script id="darkModeToggle">
+      document.addEventListener("DOMContentLoaded", function () {
+        const modeSwitch = document.getElementById("modeSwitch");
+        const body = document.body;
+
+        // Check for saved theme preference or use preferred color scheme
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "dark") {
+          body.classList.add("dark-mode");
+          modeSwitch.classList.add("dark");
+        }
+
+        modeSwitch.addEventListener("click", function () {
+          body.classList.toggle("dark-mode");
+          modeSwitch.classList.toggle("dark");
+
+          // Save preference
+          if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+        });
+      });
+    </script>
+
+    <script id="countersAnimation">
+      document.addEventListener("DOMContentLoaded", function () {
+        const counters = document.querySelectorAll(".counter-value");
+
+        const startCounters = () => {
+          counters.forEach((counter) => {
+            const target = parseInt(counter.getAttribute("data-target"));
+            const duration = 2000; // 2 seconds
+            const step = target / (duration / 20); // Update every 20ms
+
+            let current = 0;
+            const timer = setInterval(() => {
+              current += step;
+
+              if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+              } else {
+                counter.textContent = Math.floor(current);
+              }
+            }, 20);
+          });
+        };
+
+        // Use Intersection Observer to start counters when visible
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                startCounters();
+                observer.disconnect();
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        if (counters.length > 0) {
+          observer.observe(
+            counters[0].parentElement.parentElement.parentElement
+          );
+        }
+      });
+    </script>
+
+    <script id="smoothScroll">
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80, // Offset for fixed header
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
